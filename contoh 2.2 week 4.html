@@ -1,0 +1,32 @@
+<<html lang="en">
+<head>
+    <title>Week 4</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            text-align: center;
+            margin-top: 40px;
+            color: #1f2937;
+        }
+        h1{
+            color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selamat Datang, Valisa!</h1>
+    <p>Web ini keren banget apalagi yang buat!</p>
+
+    <script>
+       const harga = 150000;
+const diskonPersen = 20;
+const potongan = harga * (diskonPersen / 100);
+const hargaAkhir = harga - potongan;
+console.log(⁠ Harga awal: Rp${harga} ⁠);
+console.log(⁠ Diskon ${diskonPersen}% = Rp${potongan} ⁠);
+console.log(⁠ Harga akhir: Rp${hargaAkhir} ⁠);
+const status = hargaAkhir < 100000 ? "Murah" : "Mahal";
+console.log(⁠ Status: ${status} ⁠);
+    </script>
+</body>
+</html>
