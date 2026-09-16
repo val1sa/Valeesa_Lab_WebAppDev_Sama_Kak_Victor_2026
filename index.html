@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TokoLab — Katalog Produk</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <h1>TokoLab</h1>
+      <p>Praktikum Web — Digital Business Technology</p>
+    </div>
+    <button id="themeToggle" class="theme-toggle" type="button">
+      <span id="themeIcon">🌙</span>
+      <span id="themeLabel">Mode Gelap</span>
+    </button>
+  </header>
+
+  <main class="layout">
+
+    <section class="catalog-panel">
+
+      <h2 class="panel-title">Katalog Produk</h2>
+
+      <div class="controls">
+        <input id="searchInput" type="text" placeholder="Cari nama produk..." autocomplete="off">
+
+        <select id="categorySelect">
+          <option value="Semua">Semua Kategori</option>
+          <option value="Aksesoris">Aksesoris</option>
+          <option value="Audio">Audio</option>
+          <option value="Penyimpanan">Penyimpanan</option>
+          <option value="Display">Display</option>
+        </select>
+
+        <select id="sortSelect">
+          <option value="default">Urutkan: Default</option>
+          <option value="price-asc">Harga: Termurah</option>
+          <option value="price-desc">Harga: Termahal</option>
+          <option value="name-asc">Nama: A-Z</option>
+          <option value="stock-desc">Stok: Terbanyak</option>
+        </select>
+      </div>
+
+      <p id="resultCount" class="result-count"></p>
+
+      <div id="productGrid" class="product-grid"></div>
+
+      <p id="emptyState" class="empty-state" hidden>Tidak ada produk yang cocok dengan pencarianmu.</p>
+
+    </section>
+
+    <aside class="cart-panel">
+      <h2 class="panel-title">Keranjang</h2>
+
+      <div id="cartEmpty" class="cart-empty">Keranjang masih kosong.</div>
+
+      <ul id="cartList" class="cart-list"></ul>
+
+      <div class="shipping-progress">
+        <p id="shippingNote"></p>
+        <div class="progress-track">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+      </div>
+
+      <div class="voucher-row">
+        <input id="voucherInput" type="text" placeholder="Kode voucher">
+        <button id="voucherBtn" type="button">Pakai</button>
+      </div>
+      <p id="voucherMsg" class="voucher-msg"></p>
+
+      <div class="summary">
+        <div class="summary-row"><span>Subtotal</span><span id="subtotalVal">Rp0</span></div>
+        <div class="summary-row"><span>Diskon</span><span id="discountVal">-Rp0</span></div>
+        <div class="summary-row"><span>Ongkir</span><span id="shippingVal">Rp0</span></div>
+        <div class="summary-row total"><span>Total</span><span id="totalVal">Rp0</span></div>
+      </div>
+
+      <button id="checkoutBtn" class="checkout-btn" type="button" disabled>Checkout</button>
+
+      <p id="checkoutMsg" class="checkout-msg"></p>
+    </aside>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
